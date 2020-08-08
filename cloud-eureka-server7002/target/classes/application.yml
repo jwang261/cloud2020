@@ -1,0 +1,11 @@
+server:
+  port: 7002
+
+eureka:
+  instance:
+    hostname: eureka7002.com # modify /etc/hosts, add 127.0.0.1 eureka7002.com & 127.0.0.1 eureka7002.com at the last line
+  client:
+    register-with-eureka: false #no need to register itself
+    fetch-registry: false
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/ #7001 -> 7002 7002 -> 7001
